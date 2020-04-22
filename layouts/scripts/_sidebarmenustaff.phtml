@@ -1,0 +1,70 @@
+<ul id="menuBar">
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'staff',
+                'action' => 'index',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Staff">STAFF</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'staff',
+                'action' => 'showcars',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Gestione auto">Gestione Auto</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'staff',
+                'action' => 'newauto',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Inserisci Auto">Inserisci Auto</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'staff',
+                'action' => 'statistica',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Dettagli"> Dettagli </a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'staff',
+                'action' => 'editprofile',
+                'Id' => $this->authInfo('IDUtente')
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Profilo"> Profilo</a></li>
+
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'staff',
+                'action' => 'logout ',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Logout">Logout</a></li>
+</ul>

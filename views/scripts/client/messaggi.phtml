@@ -1,0 +1,27 @@
+<h1 class="head-table">Messaggi</h1>
+<?php $i = 0 ?>
+<?php $url_msg = $this->url(array(
+            'controller' => 'client',
+            'action' => 'newmessagge',
+                ),
+                'default', true
+        );
+?>
+<center>
+<div>
+    <div>
+        <center><h4>Messaggi</h4></center>
+        <div class="chat">
+            <?php if($this->Messaggi !== null): ?>
+            <?php foreach ($this->Messaggi as $msg) : ?>
+                <div class="messaggi" id="<?= $i=$i +1 ?>">
+                    <?= $msg->Data.'<br>'.$msg->Messaggio ?><br>
+                </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
+            <a href="<?=$url_msg ?>"><img src="<?=$this->baseUrl('images/logo_newmessage.png') ?>" alt="nuovo messaggio"></img></a>
+        </div>
+    </div>
+</div>
+</center>
+

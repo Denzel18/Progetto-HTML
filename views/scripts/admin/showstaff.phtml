@@ -1,0 +1,32 @@
+<h1 class="head-table">Lista Staff</h1>
+<div class='viewstaff'>
+
+<table class='viewstaff'>
+    <thead class='viewstaff'>
+        <td class='viewstaff-head'>IDUtente</td>
+        <td class='viewstaff-head'>Codice Patente</td>
+        <td class='viewstaff-head'>Nome</td>
+        <td class='viewstaff-head'>Cognome</td>
+        <td class='viewstaff-head'>Username</td>
+        <td class='viewstaff-head'>Password</td>
+        <td class='viewstaff-head'>MODIFICA</td>
+        <td class='viewstaff-head'>ELIMINA</td>
+    </thead>
+    <?php foreach($this->Staff as $membro) : ?>
+
+    <?php $eliminaUrl = $this->url(array('controller' => 'admin' , 'action' => 'deletestaff', 'staffId' => $membro->IDUtente), 'default',true); ?>
+    <?php $modificaUrl = $this->url(array('controller' => 'admin' , 'action' => 'editstaff', 'staffId' => $membro->IDUtente), 'default',true); ?>
+    <tr class='viewstaff'>
+        <td class='viewstaff'><?= $membro->IDUtente ?></td>
+        <td class='viewstaff'><?= $membro->CodicePatente ?></td>
+        <td class='viewstaff'><?= $membro->Nome ?></td>
+        <td class='viewstaff'><?= $membro->Cognome ?></td>
+        <td class='viewstaff'><?= $membro->Username ?></td>
+        <td class='viewstaff'><?= $membro->Password ?></td>
+        <td class='viewstaff'><a href="<?php echo($modificaUrl); ?>">MODIFICA</a></td>
+        <td class='viewstaff'><a href="<?php echo($eliminaUrl); ?>">ELIMINA</td>
+    </tr>
+    <?php endforeach; ?>
+
+</table>
+</div>

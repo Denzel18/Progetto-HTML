@@ -1,0 +1,22 @@
+<?php $i = 0; ?>
+
+    <div class="pannello_faq">
+        <br>
+        <center>
+        <div class="FAQ">
+        <?php foreach ($this->Faqs as $faq) : ?>
+            <?php $i = $i + 1; ?>
+            
+            <div><a class="faq" onclick="toggle_visibility('freccia<?php echo $i ?>', 'risposta<?php echo $i ?>');">DOMANDA <?php echo $i ?> : <?php echo ($faq->Domanda) ?></a></div>
+            <div class="faq" id="risposta<?php echo $i ?>" style="display:none; padding:30px;"><?php echo ($faq->Risposta); ?></div>
+           
+        <?php endforeach ?>
+         </div>
+        <script>
+            function toggle_visibility(img, id) {
+                var e = document.getElementById(id);
+                e.style.display = ((e.style.display !== 'none') ? 'none' : 'block');
+            }
+        </script>
+        </center>
+    </div>

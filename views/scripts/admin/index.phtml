@@ -1,0 +1,49 @@
+<div style="width:100%; opacity:0.7; background-color: white;">
+    <center><h1>Area Amministratore</h1></center>
+    <center><h2>Seleziona la funzione da attivare</h2></center>
+    <center><h2>Benvenuto, <?php echo $this->authInfo('Nome') . ' ' . $this->authInfo('Cognome'); ?></h2></center>
+</div>
+
+<?php $url_staff = $this->url(array('controller' => 'admin', 'action' => 'showstaff'), 'default', true);
+    $url_client = $this->url(array('controller' => 'admin', 'action' => 'showclient'), 'default', true);
+    $url_auto = $this->url(array('controller' => 'admin', 'action' => 'showcars'), 'default', true);
+    $url_faq = $this->url(array('controller' => 'admin', 'action' => 'showfaq'), 'default', true);
+    $url_staff_add = $this->url(array('controller' => 'admin', 'action' => 'newstaff'), 'default', true);
+    $url_auto_add = $this->url(array('controller' => 'admin', 'action' => 'newauto'), 'default', true);
+    $url_faq_add = $this->url(array('controller' => 'admin', 'action' => 'newfaq'), 'default', true);
+    $url_client_add = $this->url(array('controller' => 'admin', 'action' => 'newclient'), 'default', true);
+    $url_user_edit = $this->url(array('controller' => 'admin', 'action' => 'editprofile', 'Id' => $this->authInfo('IDUtente')), 'default', true);
+    $url_statistica = $this->url(array('controller' => 'admin', 'action' => 'statistica'), 'default', true);
+    $url_msg = $this->url(array('controller' => 'admin', 'action' => 'messaggi'), 'default', true); 
+?>
+<center>
+    <div>
+        <div class="pannello_componente" >
+            <img class="loghi" src="<?= $this->baseUrl('images/logo_utenti.png') ?>"><br>
+            <a href="<?= $url_staff ?>">Gestione STAFF</a><br>
+            <a href="<?= $url_staff_add ?>">Inserisci Staff </a>
+
+        </div>
+        <div class="pannello_componente" >
+            <img class="loghi" src="<?= $this->baseUrl('images/logo_clienti.png') ?>"><br>
+            <a href="<?= $url_client ?>">Gestione CLIENTI</a><br>
+            <a href="<?= $url_client_add ?>">Inserisci Cliente </a>
+        </div>
+        <div class="pannello_componente" >
+            <img class="loghi" src="<?= $this->baseUrl('images/logo_noleggio.png') ?>"><br>
+            <a href="<?= $url_auto ?>">Gestione AUTO</a><br>
+            <a href="<?= $url_auto_add ?>">Inserisci AUTO</a>
+        </div>
+        <div class="pannello_componente" >
+            <img class="loghi" src="<?= $this->baseUrl('images/logo_faq.png') ?>"><br>
+            <a href="<?= $url_faq ?>">FAQ</a><br>
+            <a href="<?= $url_faq_add ?>">Inserisci FAQ </a>
+        </div>
+        <div class="pannello_componente" ><img class="loghi" src="<?= $this->baseUrl('images/logo_admin.png') ?>"><br>
+            <a href="<?= $url_user_edit ?>">MODIFICA PROFILO</a></div>
+        <div class="pannello_componente" ><img class="loghi" src="<?= $this->baseUrl('images/logo_statistica.png') ?>"><br>
+            <a href="<?= $url_statistica ?>">STATISTICA</a></div>
+        <div class="pannello_componente" ><img class="loghi" src="<?= $this->baseUrl('images/logo_msg.png') ?>"><br>
+            <a href="<?= $url_msg ?>">Messaggi</a></div>
+    </div>
+</center>

@@ -1,0 +1,48 @@
+<h1 class="head-table">Lista Auto</h1>
+<div class='viewstaff'>
+<table class='viewstaff'>
+    <thead class='viewstaff'>
+        <td class='viewstaff-head'>Targa</td>
+        <td class='viewstaff-head'>Colore</td>
+        <td class='viewstaff-head'>Marca</td>
+        <td class='viewstaff-head'>Modello</td>
+        <td class='viewstaff-head'>Alimentazione</td>
+        <td class='viewstaff-head'>Numero Posti</td>
+        <td class='viewstaff-head'>Cilindrata</td>
+        <td class='viewstaff-head'>Under25</td>
+        <td class='viewstaff-head'>Prezzo</td>
+        <td class='viewstaff-head'>SLIDER 1</td>
+        <td class='viewstaff-head'>SLIDER 2</td>
+        <td class='viewstaff-head'>CATALOGO</td>
+        <td class='viewstaff-head'>MODIFICA</td>
+        <td class='viewstaff-head'>ELIMINA</td>
+    </thead>
+    <?php foreach($this->Car as $auto) : ?>
+
+    <?php $eliminaUrl = $this->url(array('controller' => 'staff' , 'action' => 'deletecar', 'carId' => $auto->IDMezzo), 'default',true); ?>
+    <?php $modificaUrl = $this->url(array('controller'=>'staff','action'=>'editcar','carId'=>$auto->IDMezzo),'default',true); ?>
+    <tr class='viewstaff'>
+        <td class='viewstaff'><a href="<?=$this->url(array('controller' => 'staff', 'action' => 'visualizza', 'carId' => $auto->IDMezzo), 'default', true);?>">
+            <?= $auto->Targa ?></a></td>
+        <td class='viewstaff'><?= $auto->Colore ?></td>
+        <td class='viewstaff'><?= $auto->Marca ?></td>
+        <td class='viewstaff'><?= $auto->Modello ?></td>
+        <td class='viewstaff'><?= $auto->Alimentazione ?></td>
+        <td class='viewstaff'><?= $auto->NPosti ?></td>
+        <td class='viewstaff'><?= $auto->Cilindrata ?></td>
+        <?php if($auto->Under25 == '1'){ ?>
+            <td class='viewstaff'>SI</td>
+        <?php }else{?>
+            <td class='viewstaff'>NO</td>
+        <?php } ?>
+        <td class='viewstaff'><?= $auto->Prezzo ?></td>
+        <td class='viewstaff'><?= $auto->Image ?></td>
+        <td class='viewstaff'><?= $auto->Image2 ?></td>
+        <td class='viewstaff'><?= $auto->Image3 ?></td>
+        <td class='viewstaff'><a href="<?= $modificaUrl?>">MODIFICA</a></td>
+        <td class='viewstaff'><a href="<?= $eliminaUrl?>">ELIMINA</a></td>
+    </tr>
+    <?php endforeach; ?>
+
+</table>
+</div>

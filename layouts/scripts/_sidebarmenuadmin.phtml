@@ -1,0 +1,141 @@
+<ul id="menuBar">
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'index',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Admin">ADMIN</a></li>
+    <li><a href=" <?=
+        $this->url(array(
+            'controller' => 'admin',
+            'action' => 'showclient',
+                ),
+                'default', true
+        );
+        ?>"
+           title="Clients">Clienti</a></li>
+
+    <li><a href=" <?=
+        $this->url(array(
+            'controller' => 'admin',
+            'action' => 'newclient',
+                ),
+                'default', true
+        );
+        ?>"
+           title="New Client">Inserisci Cliente</a></li>
+
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'showstaff',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Staffs">Staffs</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'newstaff',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="New Staffs">Inserisci Staff</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'showcars',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Auto">Auto</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'newauto',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="New Auto">Inserisci Auto</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'showfaq'),
+                    'default', true
+            );
+            ?>"
+            title="Faq"> Faq </a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'newfaq'),
+                    'default', true
+            );
+            ?>"
+            title="New Faq">Inserisci Faq</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'messaggi',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="FAQ"> Messaggi </a></li>
+    <li><a 
+            href="<?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'statistica',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Statistica"> Statistica </a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'editprofile',
+                'Id' => $this->authInfo('IDUtente')
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="profilo"> Profilo</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'admin',
+                'action' => 'logout ',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Logout">Logout</a></li>
+</ul>

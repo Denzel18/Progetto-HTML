@@ -1,0 +1,66 @@
+<?php $utente = ($this->authInfo('Nome') . ' ' . $this->authInfo('Cognome')); ?>
+<ul id="menuBar">
+    <li><a href=" <?=
+        $this->url(array(
+            'controller' => 'client',
+            'action' => 'index',
+                ),
+                'default', true
+        );
+        ?>"
+           title="Client"><?= $utente ?></a></li>
+    <li><a href=" <?=
+        $this->url(array(
+            'controller' => 'client',
+            'action' => 'catalogo',
+                ),
+                'default', true
+        );
+        ?>"
+           title="prenotazioni">Prenota</a></li>
+    <li><a href=" <?=
+        $this->url(array(
+            'controller' => 'client',
+            'action' => 'showbooking',
+                ),
+                'default', true
+        );
+        ?>"
+           title="prenotazioni">Prenotazioni</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'client',
+                'action' => 'editprofile',
+                'Id' => $this->authInfo('IDUtente')
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="profilo"> Profilo</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'client',
+                'action' => 'messaggi',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="message"> Messaggi </a></li>
+
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'client',
+                'action' => 'logout ',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Logout">Logout</a></li>
+
+</ul>

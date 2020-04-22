@@ -1,0 +1,90 @@
+<?php $url_newbooking = $this->url(array( 'controller' => 'client','action'     => 'newbooking', 'carId' =>$this->Car->IDMezzo),  'default',true );  ?>
+<div class="pannello_visualizza_auto">
+    <div class="immagine_visualizza">
+        <div class="slider">
+            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+            <?php
+            if (!is_null($this->Car->Image)) {
+                $img1 = 'images/' . $this->Car->Image;
+            } else {
+                $img1 = 'images/default.jpg';
+            }
+            if (!is_null($this->Car->Image2)) {
+                $img2 = 'images/' . $this->Car->Image2;
+            } else {
+                $img2 = 'images/default.jpg';
+            }
+            ?>
+            <img class="mySlides" style="float:left; height:300px; width:100%; z-index: -100; " src="<?= $this->baseUrl($img1) ?>">
+            <img class="mySlides" style=" float:left; height:300px; width:100%; z-index: -100;" src="<?= $this->baseUrl($img2) ?>">
+
+            <button class="right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = x.length;
+                }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
+        </script>
+
+        <div class="testoAUTO">
+            <center><h1>Perchè noleggiarla ?</h1></center>
+            <p class="why">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur convallis justo eu neque 
+                convallis, non lacinia mauris dictum. Suspendisse potenti. Proin augue enim, egestas a 
+                ipsum ut, pretium bibendum leo. Suspendisse nisl justo, dictum non ante ut, lobortis varius 
+                ante. Nullam quis placerat velit, vel fringilla nulla. Aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur convallis justo eu neque 
+                convallis, non lacinia mauris dictum. Suspendisse potenti. Proin augue enim, egestas a 
+                ipsum ut, pretium bibendum leo. Suspendisse nisl justo, dictum non ante ut, lobortis varius 
+                ante. Nullam quis placerat velit, vel fringilla nulla. Aliquam erat volutpatLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur convallis justo eu neque 
+                convallis, non lacinia mauris dictum. Suspendisse potenti. Proin augue enim, egestas a 
+                ipsum ut, pretium bibendum leo. Suspendisse nisl justo, dictum non ante ut, lobortis varius 
+                ante. Nullam quis placerat velit, vel fringilla nulla. Aliquam erat volutpat</p>
+        </div>
+        <?php if (!is_null($this->Car)): ?>
+            <div class="schedaTecnica" >
+                <h1 style="color:gray;  ; opacity:1.0; font-size:3em;">Scheda tecnica</h1> 
+                <table class="visualizzaAuto">
+                    <thead>
+                    <td class="visualizzaAutoHead">Marca</td>
+                    <td class="visualizzaAutoHead">Modello</td>
+                    <td class="visualizzaAutoHead">Colore</td>
+                    <td class="visualizzaAutoHead">Alimentazione</td>
+                    <td class="visualizzaAutoHead">Numero Posti</td>
+                    <td class="visualizzaAutoHead">Under 25</td>
+                    </thead>    
+                    <tr class="visualizzaAuto">
+                        <td class="visualizzaAuto"><?= $this->Car->Marca ?></td>
+                        <td class="visualizzaAuto"><?= $this->Car->Modello ?></td>
+                        <td class="visualizzaAuto"><?= $this->Car->Colore ?></td>
+                        <td class="visualizzaAuto"><?= $this->Car->Alimentazione ?></td>
+                        <td class="visualizzaAuto"><?= $this->Car->NPosti ?></td>
+                        <td class="visualizzaAuto"><?php
+                            if ($this->Car->Under25 == '0') {
+                                echo ("SI");
+                            } else {
+                                echo ("NO");
+                            }
+                            ?></td>
+                    </tr>
+                </table>
+            </div>
+        <?php endif ?>
+    </div>
+</div>

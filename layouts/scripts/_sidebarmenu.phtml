@@ -1,0 +1,133 @@
+
+
+<ul id="menuBar">
+    <li><a href=" <?=
+        $this->url(array(
+            'controller' => 'public',
+            'action' => 'index',
+                ),
+                'default', true
+        );
+        ?>"
+           title="Home">Home</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'public',
+                'action' => 'catalogo',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Catalogo"> Catalogo</a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'public',
+                'action' => 'viewstatic',
+                'staticPage' => 'where'),
+                    'default', true
+            );
+            ?>"
+            title="Contact"> Contattaci </a></li>
+
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'public',
+                'action' => 'viewstatic',
+                'staticPage' => 'who'),
+                    'default', true
+            );
+            ?>"
+            title="Contact"> Chi siamo </a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'public',
+                'action' => 'viewstatic',
+                'staticPage' => 'info'),
+                    'default', true
+            );
+            ?>"
+            title="Info"> Informazioni </a></li>
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'public',
+                'action' => 'viewstatic',
+                'staticPage' => 'regulation'),
+                    'default', true
+            );
+            ?>"
+            title="Regolamento"> Regolamento </a></li>
+
+    <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'public',
+                'action' => 'faq'),
+                    'default', true
+            );
+            ?>"
+            title="FAQ"> FAQ </a></li>
+            
+            
+<?php if (Zend_Auth::getInstance()->hasIdentity()):?> 
+        <li><a
+            href="
+            <?= $this->url(array(
+                'controller' =>Zend_Auth::getInstance()->getIdentity()->Role,
+                'action' => 'index',
+                ),
+                'default', true);?>"
+                title="Utente"><?= Zend_Auth::getInstance()->getIdentity()->Nome.' '.Zend_Auth::getInstance()->getIdentity()->Cognome ?></a></li>
+                <li><a
+            href="
+            <?=
+            $this->url(array(
+                'controller' => 'client',
+                'action' => 'logout ',
+                    ),
+                    'default', true
+            );
+            ?>"
+            title="Logout">Logout</a></li>
+    <?php else :?> 
+            <li><a
+                href="
+                <?= $this->url(array(
+                'controller' => 'public',
+                'action' => 'login',
+                    ),
+                    'default', true);?>"
+            title="Login">Login</a></li>
+            
+            <li><a 
+                    href= "
+                   <?=$this->url(array(
+                   'controller' => 'public',
+                   'action' => 'registernewclient',
+                     ),
+                       'default', true);?>" 
+                   title="Registrati">Registrati</a></li>
+<?php endif; ?>
+                        <li><a
+                href="
+                <?= $this->url(array(
+                'controller' => 'public',
+                'action' => 'doc',
+                    ),
+                    'default', true);?>"
+            title="Documentazione">Documentazione</a></li>
+            
+
+    
+
+

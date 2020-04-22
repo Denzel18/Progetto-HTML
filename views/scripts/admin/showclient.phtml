@@ -1,0 +1,76 @@
+<script src="http://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+<h1 class="head-table">Lista Clienti</h1>
+<div class='viewstaff'>
+    <form method="post">
+        <table class='viewstaff'>
+            <thead class='viewstaff'>
+            <td class='viewstaff-head'>IDUtente</td>
+            <td class='viewstaff-head'>Codice Patente</td>
+            <td class='viewstaff-head'>Nome</td>
+            <td class='viewstaff-head'>Cognome</td>
+            <td class='viewstaff-head'>Username</td>
+            <td class='viewstaff-head'>Password</td>
+            <td class='viewstaff-head'>MODIFICA</td>
+            <td class='viewstaff-head'>ELIMINA</td>
+            <td class="viewstaff-head">ELIMINA TUTTI </td>
+            </thead>
+            <?php foreach ($this->Clienti as $membro) : ?>
+
+                <?php $eliminaUrl = $this->url(array('controller' => 'admin', 'action' => 'deleteclient', 'clientId' => $membro->IDUtente), 'default', true); ?>
+                <?php $modificaUrl = $this->url(array('controller' => 'admin', 'action' => 'editclient', 'clientId' => $membro->IDUtente), 'default', true); ?>
+                <tr class='viewstaff'>
+                    <td class='viewstaff'><?= $membro->IDUtente ?></td>
+                    <td class='viewstaff'><?= $membro->CodicePatente ?></td>
+                    <td class='viewstaff'><?= $membro->Nome ?></td>
+                    <td class='viewstaff'><?= $membro->Cognome ?></td>
+                    <td class='viewstaff'><?= $membro->Username ?></td>
+                    <td class='viewstaff'><?= $membro->Password ?></td>
+                    <td class='viewstaff'><a href="<?php echo($modificaUrl); ?>">MODIFICA</td>
+                    <td class='viewstaff'><a href="<?php echo($eliminaUrl); ?>">ELIMINA</td>
+                    <td class='viewstaff'><input type="checkbox" name="eliminaUtente" value="<?= $membro->IDUtente ?>"></td>
+                </tr>
+            <?php endforeach; ?>
+    </form>
+    <tr>
+        <td class='viewstaff'></td>
+        <td class='viewstaff'></td>
+        <td class='viewstaff'><input type="button" value="Elimina" onclick="EliminaSelezionati();"> </td>
+        <td class='viewstaff'></td>
+        <td class='viewstaff'></td>
+        <td class='viewstaff'></td>
+        <td class='viewstaff'><input type="button" value="Seleziona Tutti" onclick="SelezionaTutti();"></td>
+        <td class='viewstaff'></td>
+        <td class='viewstaff'></td>
+        
+        
+    </tr>
+</table>
+
+ 
+
+  
+</div>
+<script type="text/javascript">
+    function EliminaSelezionati() {
+        var s = "";
+        var checkboxes = document.getElementsByName("eliminaUtente");
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                s += checkboxes[i].getAttribute("value") + ",";
+            }
+        }
+        alert("Eliminazione utenti, gli ID utenti selezionati sono : " + s);
+        window.location.href = "<?= $this->url(array('controller' => 'admin', 'action' => 'eliminazionemultipla'), 'default', true); ?>" + "/ID/" + s;
+        return false;
+
+    }
+    function SelezionaTutti() {
+        var s = "";
+        var checkboxes = document.getElementsByName("eliminaUtente");
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = true;
+            s += checkboxes[i].getAttribute("value") + ",";
+        }
+        alert("Stai selezionato tutti i clienti");
+    }
+</script>

@@ -1,0 +1,64 @@
+<?php echo $this->doctype() ?>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ancona Car - Errore</title>
+        <style>
+            div.errore{
+                background-color: red;
+                padding:10px;
+                border-bottom: 5px solid whitesmoke;
+                text-align: center;
+            }
+            body,html {
+                margin:0;
+                background-color: gray;
+            }
+            div.exception{
+                background-color: yellowgreen;
+                padding:10px;
+                text-align: left;
+                border-bottom: 5px solid whitesmoke;
+            }
+            footer{
+                background: black;
+                text-align: center; 
+                color:white;
+                padding: 10px;
+                border-bottom: 5px solid whitesmoke; 
+            }
+            a{
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='errore'>
+            <h1>Si è verificato un errore, durante la richiesta della pagina</h1>
+            <h2><?php echo $this->message ?></h2>
+        </div>
+        <div class='exception'>
+            <?php if (isset($this->exception)): ?>
+
+                <h3>Exception information:</h3>
+                <p>
+                    <b>Message:</b> <?php echo $this->exception->getMessage() ?>
+                </p>
+
+                <h3>Stack trace:</h3>
+                <pre><?php echo $this->exception->getTraceAsString() ?>
+                </pre>
+
+                <h3>Request Parameters:</h3>
+                <pre><?php echo var_export($this->request->getParams(), true) ?>
+                </pre>
+            <?php endif ?>
+        </div>
+        <footer>
+            Se il problema persiste contatta l'amministratore del sito: <a href='mailto:bernovschi.denis@gmail.com?subject=Errore Pagina'>MAIL</a>
+        </footer>
+
+
+
+    </body>
+</html>

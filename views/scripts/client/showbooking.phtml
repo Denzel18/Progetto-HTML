@@ -1,0 +1,29 @@
+<h1 class="head-table">Lista Prenotazioni</h1>
+<div class='viewstaff'>
+
+    <table class='viewstaff'>
+        <thead class='viewstaff'>
+        <td class='viewstaff-head'>Targa</td>
+        <td class='viewstaff-head'>Ritiro</td>
+        <td class='viewstaff-head'>Consegna</td>
+        <td class='viewstaff-head'>Data Prenotazione</td>
+        <td class='viewstaff-head'>MODIFICA</td>
+        </thead>
+        <?php foreach ($this->Prenotazione as $booked) : ?>
+            <?php $modificaUrl = $this->url(array(
+                'controller' => 'client',
+                'action' => 'editbooking',
+                'bookingId' => $booked->IDPrenotazione),
+                'default', true); 
+            ?>
+            <tr class='viewstaff'>
+                <td class='viewstaff'><a href="<?=$this->url(array('controller' => 'client', 'action' => 'visualizza', 'carId' => $booked->IDMezzo), 'default', true);?>"><?= $booked->Targa ?></a></td>
+                <td class='viewstaff'><?= $booked->DataInizio ?></td>
+                <td class='viewstaff'><?= $booked->DataFine ?></td>
+                <td class='viewstaff'><?= $booked->DataPrenotazione ?></td>
+                <td class='viewstaff'><a class="viewstaff" href="<?= $modificaUrl ?>">MODIFICA</a></td>
+            </tr>
+        <?php endforeach; ?>
+
+    </table>
+</div>

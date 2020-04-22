@@ -1,0 +1,32 @@
+<nav class="nav_menu">
+    <div class="container_menu" onclick="menu()">
+        <?php $img = 'images/menu.png';?>
+        
+        <img  style=" height:30px; width:47; padding:2px;" src="<?= $this->baseUrl($img) ?>">
+
+                    </div>
+
+    <div class="nav_logo">
+        <a href="<?=$this->url(array('controller' => 'public','action' => 'index',),'default', true);?>" title="Home">ANCONACAR</a>
+      
+    </div>
+
+</nav>
+<script type="text/javascript">
+function mostra() {
+	document.getElementById("menu").style.left="0px";
+}
+function nascondi() {
+	document.getElementById("menu").style.left="-200px";
+}
+function menu() {
+	if(document.getElementById("menu").style.left==="-200px"){
+		document.getElementById("menu").style.left="0px";
+		
+	}else{
+		document.getElementById("menu").style.left="-200px";
+	}
+}
+window.onload = function() {
+	document.getElementById('menu').style.left="-200px";
+}; </script>

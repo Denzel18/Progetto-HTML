@@ -1,0 +1,69 @@
+<?php echo $this->doctype() ?>
+<html>
+    <head>
+        <?= $this->headMeta(); ?>
+        <?= $this->headLink(); ?>
+        <?= $this->headTitle(); ?>
+        <?= $this->headScript(); ?>
+    </head>
+    <body>
+        <div class='container'>
+
+        <header id="header">
+            <?= $this->render('_topnavbar.phtml') ?>
+        </header>
+
+
+        <!-- end #header -->
+        <div id="menu">
+            <?= $this->render('_sidebarmenustaff.phtml') ?>
+        </div>
+        
+
+        <!-- end #menu -->
+        <div class="pannello_staff">
+            <?php echo $this->layout()->content; ?>
+        </div>
+        </div>
+
+        <!-- end #content -->
+        <footer>
+            <div class="footer">
+                <div class="footer_component">
+                    Accumsan montes viverra<br>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem 
+                        non mi integer non faucibus ornare mi ut ante amet placerat aliquet. 
+                    </p>
+                </div>
+                <div class="footer_component_elenco">
+                    Sem turpis amet semper<br>
+                    <ul class="elenco_footer" >
+                        <li  class="li_footer"><a href="#">Dolor pulvinar sed etiam.</a></li>
+                        <li  class="li_footer"><a href="#">Etiam vel lorem sed amet.</a></li>
+                        <li  class="li_footer"><a href="#">Felis enim feugiat viverra.</a></li>
+                        <li  class="li_footer"><a href="#">Dolor pulvinar magna etiam.</a></li>
+                    </ul>
+                </div>
+                <div class="footer_component_elenco">
+                    Sem turpis amet semper<br>
+                    <ul class="elenco_footer">
+                        <li  class="li_footer"><a href="#">Twitter</a></li>
+                        <li  class="li_footer"><a href="#"></i>Facebook</a></li>
+                        <li  class="li_footer"><a href="#">Instagram</a></li>
+                        <li  class="li_footer"><a href="#">Github</a></li>
+                    </ul>
+                </div> 
+                <div class="footer_component">
+                    Accumsan montes viverra<br>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem 
+                        non mi integer non faucibus ornare mi ut ante amet placerat aliquet. 
+                    </p>
+                </div>
+            </div>
+            <div class="footer_line">
+                <span>Per chiarimenti o problemi riscontrati scrivi a questa <a class="mail" href="mailto:bernovschi.denis@gmail.com?Subject=Problemi%riscontrati" > Mail </a></span>
+            </div>
+        </footer>
+        <!-- end #footer -->
+    </body>
+</html>

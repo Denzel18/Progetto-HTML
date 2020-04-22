@@ -1,0 +1,60 @@
+<?php if ($this->Cars != null) : ?>
+    <div class="filtri_catalogo">
+        <center><h2>Scegli la tua Auto </h2></center>
+        <center><?= $this->filterForm; ?></center>
+    </div>
+    <div class="filtri_catalogo">
+        <center> Reset i filtri</center>
+        <center><input type="button" value="Reset" onclick="resetFiltri();"></input></center>
+    </div>
+    <center>
+        <div class="schede">
+
+            <?php foreach ($this->Cars as $car) : ?> 
+                <?php $showcar = $this->url(array('controller' => 'public', 'action' => 'visualizza', 'carId' => $car->IDMezzo), 'default', true); ?>
+
+                <?php
+                if (!is_null($car->Image3)) {
+                    $imgCatalogo = 'images/' . $car->Image3;
+                } else {
+                    $imgCatalogo = 'images/default.jpg';
+                }
+                ?>
+                <div class="scheda_catalogo">
+                    <div class="img_catalogo">
+                        <a href="<?= $showcar ?>"><img class="catalogo" src="<?= $this->baseUrl($imgCatalogo) ?>"> </a>
+                    </div>
+
+                    <div class="caratteristiche_auto">
+                        <?= 'Targa : ' . $car->Targa . '<br>' . 'Colore : ' . $car->Colore . '<br>' . 'Marca : ' . $car->Marca . '<br>' . 'Modello : ' . $car->Modello . '<br>' ?>
+                        <?= 'Alimentazione : ' . $car->Alimentazione . '<br>' . 'Numero Posti : ' . $car->NPosti . '<br>' ?>
+                        <?php
+                        echo ('Neopatentato : ');
+                        if ($car->Under25 == '1') {
+                            echo ("SI");
+                        } else {
+                            echo ("NO");
+                        }
+                        ?>
+                    </div>
+                    <div class="prezzo">
+                        <?= $car->Prezzo ?> &euro; <small class="prezzo">al giorno</small>
+                    </div>
+                </div>
+
+            <?php endforeach ?>
+        </div>
+    </center>
+    <?php
+    if ($this->Cars instanceof Zend_Paginator) {
+        echo $this->paginationControl($this->Cars, 'Sliding', 'public/_paginator.phtml');
+    }
+    ?>
+<?php endif; ?>
+
+<script type="text/javascript">
+    function resetFiltri() {
+        window.location.href = "<?= $this->url(array('controller' => 'public', 'action' => 'azzerafiltri'), 'default', true); ?>";
+        return false;
+    }
+</script>

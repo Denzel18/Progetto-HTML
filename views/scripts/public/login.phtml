@@ -1,0 +1,16 @@
+<?php
+$url_registrati = $this->url(array(
+    'controller' => 'public',
+    'action' => 'registernewclient',
+        ),
+        'default', true
+);
+?>
+<div class="pannello_login">
+	<div class="login_form">
+		<h2>Entra in Ancona Car</h2>
+		<p>Scopri un mondo di possibilià</p>
+		<?= $this->loginForm; ?>
+                <p>Sei non sei ancora registrato, <a href="<?= $url_registrati ?>">Registrati</a></p>
+	</div>
+</div>

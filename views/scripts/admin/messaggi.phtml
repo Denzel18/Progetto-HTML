@@ -1,0 +1,61 @@
+<h1 class="head-table">Messaggi</h1>
+<center>
+<div>
+    <div class="messaggi_nonletti" style="min-height: 300px; height:auto; width: 100% ; min-width: 1200px; background-color: rgba(255,73,73,0.4); ">
+        <center><h4>Messaggi Non Letti</h4></center>
+        <table class="viewstaff">
+            <thead  class="viewstaff">
+            <td  class="viewstaff">Data</td>
+            <td class="viewstaff">ID Mittente</td>
+            <td class="viewstaff">Messaggio</td>
+            <td class="viewstaff">Rispondi</td>
+            </thead>
+            <?php foreach ($this->MessaggiNonLetti as $msg) : ?>
+            <?php $url_rispondi = $this->url(array(
+            'controller' => 'admin',
+            'action' => 'rispondi',
+                'IdMsg' => $msg->IDMessaggio
+                ),
+                'default', true
+        );
+        ?>
+                <tr class="viewstaff">
+                    <td class="viewstaff" ><?= $msg->Data ?></td>
+                    <td class="viewstaff"><?= $msg->IDMittente ?></td>
+                    <td class="viewstaff"><?=$msg->Messaggio?></td>
+                    <td class="viewstaff"><a  href="<?= $url_rispondi ?>">RISPONDI</a></td>
+                </tr>
+            <?php endforeach; ?>
+
+        </table>
+
+    </div>
+        <div class="messaggi_nonletti" style="min-height: 300px; height:auto; width: 100% ; min-width: 1200px; background-color: rgba(255,73,73,0.4); ">
+        <center><h4>Messaggi Letti</h4></center>
+        <table class="viewstaff">
+            <thead  class="viewstaff">
+            <td  class="viewstaff">Data</td>
+            <td class="viewstaff">ID Mittente</td>
+            <td class="viewstaff">Messaggio</td>
+            </thead>
+            <?php foreach ($this->MessaggiLetti as $msg) : ?>
+            <?php $url_rispondi = $this->url(array(
+            'controller' => 'admin',
+            'action' => 'rispondi',
+                'IdMsg' => $msg->IDMessaggio
+                ),
+                'default', true
+        );
+        ?>
+                <tr class="viewstaff">
+                    <td class="viewstaff" ><?= $msg->Data ?></td>
+                    <td class="viewstaff"><?= $msg->IDMittente ?></td>
+                    <td class="viewstaff"><?=$msg->Messaggio?></td>
+                </tr>
+            <?php endforeach; ?>
+
+        </table>
+
+    </div>
+</div>
+</center>

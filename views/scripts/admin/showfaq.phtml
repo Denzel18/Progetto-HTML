@@ -1,0 +1,25 @@
+<h1 class="head-table">Lista Faq</h1>
+<div class='viewstaff'>
+
+    <table class='viewstaff'>
+    <thead class='viewstaff'>
+        <td class='viewstaff-head'>Domanda</td>
+        <td class='viewstaff-head'>Risposta</td>
+        <td class='viewstaff-head'>MODIFICA</td>
+        <td class='viewstaff-head'>ELIMINA</td>
+    </thead>
+    <?php foreach($this->Faq as $faq) : ?>
+
+    <?php $eliminaUrl = $this->url(array('controller' => 'admin' , 'action' => 'deletefaq', 'faqId' => $faq->IDFaq), 'default',true); ?>
+    <?php $modificaUrl = $this->url(array('controller' => 'admin' , 'action' => 'editfaq', 'faqId' => $faq->IDFaq), 'default',true); ?>
+    <tr class='viewstaff'>
+        <td class='viewstaff'><?= $faq->Domanda ?></td>
+        <td class='viewstaff'><?= $faq->Risposta ?></td>
+
+        <td class='viewstaff'><a href="<?php echo($modificaUrl); ?>">MODIFICA</a></td>
+        <td class='viewstaff'><a href="<?php echo($eliminaUrl); ?>">ELIMINA</td>
+    </tr>
+    <?php endforeach; ?>
+
+</table>
+</div>
