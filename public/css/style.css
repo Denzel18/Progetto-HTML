@@ -1,0 +1,1110 @@
+
+/* -------------- MENU, BODY ----------------*/
+.header
+{
+   width: 100%;
+   height:auto;
+}
+
+nav.nav_menu{
+    background-color:black; 
+    width:100%;
+    min-width:1200px;
+    min-height:auto;
+   
+}
+
+.container_menu {
+  display: inline-block;
+  cursor: pointer;
+  padding-left:3px;
+
+}
+
+
+div.nav_logo {
+  display: inline-block;
+  cursor: pointer;
+  float:right;
+  background-color: black;
+  height:30px;   
+}
+div.nav_logo a {
+    color:white ;
+    display: block;
+    font-weight: bold;
+    line-height: 30px;
+    padding-top: 5px;
+    
+    text-decoration: none;
+    width: 135px; /* 150px - 15px (padding) */
+    height: auto;
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    justify-content:center;
+    -webkit-justify-content:center;
+    -moz-justify-content:center;
+    -ms-justify-content:center;
+    align-items:center;
+    -webkit-align-items:center;
+    -moz-align-items:center;
+    -ms-align-items:center;
+    vertical-align: middle;
+    
+    
+}
+
+div.nav_logo:hover {
+    background-color: #c62828; 
+}
+
+#menu {
+    left:-200px;
+    height:100%;
+    background-color:#9e9e9e;
+    position:absolute;
+    z-index: 400;
+}
+ul#menuBar {
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+#menu {
+    left:-99999px;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.7);
+    position:absolute;
+    z-index: 500;
+
+}
+ul#menuBar {
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul#menuBar li {
+    background-color: #B8B8B8;
+    border-right: 5px #B8B8B8;
+    display: block;
+    width: 150px;
+    height: 30px;
+
+}
+
+ul#menuBar li a {
+    color:white ;
+    display: block;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 15px;
+    text-decoration: none;
+    width: 135px; 
+    height: 30px;
+}
+
+li a:hover {
+
+    background-color: #c62828;
+    color:#c62828;
+}
+
+h1 {
+    text-align: center;
+    color: appworkspace;
+    padding: 1em;
+    font-size:2em;
+}
+html,body{
+    height:100%;
+    margin:0;
+}
+div.container{
+    background-image: url('../images/sfondo.jpg');
+    min-height: 100%;
+    display:block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position : center; 
+    background-attachment: fixed;
+    height:auto;
+    margin: 0;
+    position:relative;
+}
+
+/*----------------------- END MENU, BODY-----------------------*/
+
+
+/*----------------------- PANNELLO MAIN-----------------------*/
+
+div.pannello{
+    min-width:1200px;
+    margin: 0 auto;
+    height:auto;
+    min-height: 800px;
+
+}
+/*----------------------- END PANNELLO MAIN -----------------------*/
+
+
+/*----------------------- Pannello CHI, REGOLAMENTO-----------------------*/
+div.chi_testo{
+    min-height: 800px;
+    position : relative ;
+    min-width:1200px;
+    align-content:space-around;
+}
+div.regolamento_testo{
+    position : relative ;
+    min-width:1200px;
+    width: 100%;
+    height: auto;
+    min-height: 800px;
+    align-content:space-around;
+}
+
+div.who_testo{    
+    width: 700px;
+    height:auto; 
+    padding:20px;
+
+    background-color:rgba(0,0,0,0.3);
+    color : white;
+}
+
+small.prezzo{
+    font-size: 14px;
+}
+/*----------------------- END PANNELLO chi -----------------------*/
+
+
+/* ------------------PANNELLO LOGIN-------------------*/
+
+div.pannello_login{
+    position : relative ;
+    min-width:1200px;
+    width:100%;
+    height: auto;
+    min-height: 800px;
+    align-content:space-around;
+}
+
+div#login{
+    font-size:1em;
+}
+
+div.login_form{
+    float:left;
+    width:auto;
+    margin-left:10%;
+    margin-top:10%;
+    background-color:rgba(255,255,255,0.7);
+    text-align:center;
+    padding: 30px;
+
+}
+label.nav{
+    font-family : Arial,Helvetica, sans-serif;
+    font-size:20px;
+    color:black;
+    font-weight: bold;
+}
+div.login{
+    position:relative;
+    text-align : center; 
+    height : 30em;
+    padding : 1em;
+}
+
+img.buttone-login{
+    width:35px;
+    height:35px;
+}
+table.zend_form{
+    background-color:rgba(255,255,255,0.7);   
+}
+td#username-label,td#passwd-label{
+    background-color:rgba(255,255,255,0.7); 
+}
+td.buttone_login[colspan='2']{
+    align-content: center;
+}
+
+/* -------------------END PANNELLO------------------*/
+
+
+/* ------------------PANNELLO STAFF, CLIENTE , CLIENTE -------------------*/
+div.pannello_staff{
+    min-height:700px;
+    min-width:1200px;
+    position:relative;
+}
+
+div.pannello_admin{
+    min-height:800px;
+    min-width:1200px;
+    position:relative;
+}
+div.pannello_client{
+    min-width:1200px;
+    min-height: 800px;
+    height:auto;
+    position:relative; 
+}
+
+div.pannello_componente{
+    display:inline-block;
+    width:300px;
+    height:200px;
+    background-color:white;
+    padding:50px;
+    margin:50px;
+    border-radius:120px;
+    text-align:center;
+}
+
+img.loghi{
+    margin:auto;
+    border-radius:20px;
+    height:150px;
+    width: 150px;
+    margin-left:75px;
+    margin-right:75px;
+}
+/* -------------------END PANNELLO STAFF, CLIENTE, ADMIN ------------------*/
+
+
+/* ------------------- PANNELLO HOMEPAGE ------------------*/
+/* ----------------METEO,Parcheggio------------------*/
+
+div.meteopark{
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    justify-content:center;
+    -webkit-justify-content:center;
+    -moz-justify-content:center;
+    -ms-justify-content:center;
+    align-items:center;
+    -webkit-align-items:center;
+    -moz-align-items:center;
+    -ms-align-items:center;
+    min-width:1100px;
+    background-color:rgba(255,255, 255,0.5);
+    margin-top:auto;
+}
+
+
+div.park, div.meteo{
+    float:left;
+    width:400px;
+    margin-top:0;
+    height:auto;
+    min-height: 351px;
+    min-width:600px;
+    padding: 30px;
+
+}
+
+img.park_img{
+    height:233px;
+    width: 400px;
+}
+
+
+
+/* ----------------SLIDER------------------*/
+div.slider{
+    width:auto;
+    height:300px;
+    margin-left:auto;
+    margin-right:auto;
+    position:relative;
+    clear:both;
+}
+img.mySlides{
+    height:300px;
+    width:auto; 
+}
+
+
+/* ----------------------------------------------*/
+div.form_noleggio{
+    position:relative;
+
+    display:flex;
+
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+
+    justify-content:center;
+
+    -webkit-justify-content:center;
+    -moz-justify-content:center;
+    -ms-justify-content:center;
+
+    align-items:center;
+
+    -webkit-align-items:center;
+    -moz-align-items:center;
+    -ms-align-items:center;
+
+    background-position:center;
+    background-color:rgba(0,0,0,0.5);
+
+
+    min-height:300px;
+    height:auto;
+
+    width:100%;
+    min-width:500px;
+    margin-top:15%;	
+}
+
+label.homepage{
+    font-family : Arial,Helvetica, sans-serif;
+    font-size:40px;
+    color:white;
+    font-weight: bold;	
+    background-color:rgba(255,165,0,0.6);
+}
+table.homepage,tr.homepage,td.homepage{
+    font-family : Arial,Helvetica, sans-serif;
+    font-size:40px;
+    color:white;
+    font-weight: bold;	
+    background-color:rgba(255,165,0,0.4);
+    align-items:center;
+}
+td.homepage{
+    width:250px;
+    text-align:center;
+    vertical-align: central;
+
+}
+td.checkbox{
+    font-family : Arial,Helvetica, sans-serif;
+    font-size:20px;
+    color:white;
+}
+tr.homepage{
+    height:50px;
+}
+
+input{
+    width:150px;
+    height:20px;
+}
+input.c{
+    width:20px;
+    height:20px;
+}
+div.video_noleggio{
+    position:relative;
+    z-index: 100;
+    min-height:800px;
+    min-width:1200px;
+    height:auto;
+}
+
+
+
+/* DIV CHI SIAMO ---------------------------------------------- */
+div.chiTesto{	
+    text-align:left;
+    font-style: italic;
+    font-weight:bold;
+    font-size :20px;
+    color: white;
+
+
+    position:absolute;
+    margin-left:auto;
+    margin-right:auto;
+    z-index: 100;
+
+
+    width:30em;
+    height:auto;
+
+    margin:200px 0 0 20px;
+    background-color:rgba(0, 0, 0, 0.8);
+
+}
+div.chiVideo{
+    position:relative;
+    clear:both;
+    width:100%;
+}
+video{
+    width:100%;
+    height:auto;
+
+}
+
+/* Auto Lusso ---------------------------------------------- */
+div.autoLussoTesto{	
+    position:fixed;
+    font-style: italic;
+    font-weight:bold;
+    font-size :20px;
+    color: white;
+
+
+    position:absolute;
+    margin-left:auto;
+    margin-right:auto;
+    z-index: 100;
+
+
+    width:30em;
+    height:auto;
+
+    margin:20px 0 0 20px;
+    background-color:rgba(0, 0, 0, 0.8);
+
+}
+div.autoLussoVideo{
+    position:relative;
+    clear:both;
+    width:100%;
+}
+video{
+    width:100%;
+    height:auto;
+
+}
+/* ----------------------------------------------*/
+
+h1{font-size: 50px; font-weight: 300;margin: 0px;padding:0}
+
+h2{font-size: 30px; font-weight: 300; margin: 0px;padding:0 }  
+
+h3{font-size: 45px; font-weight: 300;margin:0 0 20px 0;padding:0}
+
+h1.info{
+    font-size: 50px;
+    color:white;
+}
+
+
+h1.head-table{
+    color:white;
+    background-color: rgba(0,0,255,0.4);
+    padding-bottom: 10px;
+}
+
+
+/* ------------------END PANNELLO HOMEPAGE -------------------*/
+
+
+
+
+
+
+
+/* ------------------PANNELLO FAQ -------------------*/
+
+div.pannello_faq{
+    width:100%;
+    position:relative; 
+    height:auto;
+    min-height:800px;
+    min-width:1200px;
+}
+div.FAQ{
+    cursor: pointer;
+    position:relative;
+    width:500px;
+    background-color:rgb(0,0,0,0.8);
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1em;
+    text-align: left;
+    padding: 30px;
+    margin-top: 40px;
+}
+h2.domanda{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1em;
+}
+a.faq{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1em;
+    text-decoration: none;
+    color:white;
+    align-content: center;
+}
+/* -----------------END PANNELLO FAQ-----------------*/
+
+
+/* ------------------PANNELLO CONTACT-------------------*/
+
+div.pannello_contact{
+    width:100%;
+    position:relative; 
+    height:auto;
+    min-height: 800px;
+    min-width:1200px;
+}
+
+
+div.mapouter{
+    position:relative;
+    float:left;
+    margin:20px;
+    width:auto;
+}
+div.contatti{
+    position:relative;
+    float:left;
+    height:200px;
+    width:auto;
+    background-color:rgb(255,255,255,0.6);
+    margin:20px;
+}
+img.social{
+    width:40px;
+    height:auto;
+}
+.mappa_google{
+    width:500px;
+    height:500px;
+}
+table.social,tr.social, td.social{
+    background-color:rgba(0,0,0,0.2);
+}
+/* -------------------END PANNELLO CONTACT--------------*/
+
+
+
+/* ------------------PANNELLO CATALOGO -------------------*/
+
+div.schede{
+    position : relative ;
+    min-width:1200px;
+    width:100%;
+    height: auto;
+    align-content:space-around;
+}
+
+div.scheda_catalogo{
+    width:30em;
+    height:auto; 
+    margin-left:auto;
+    margin-right:auto;
+    display:inline-block;
+    border-bottom: 1px solid black;
+    margin:2em;
+}
+
+
+img.catalogo{
+    width:30em; 
+    height:200px;
+    border-bottom: 1px solid black;
+    background-color:gray;
+}
+
+div.caratteristiche_auto{
+    font-family:Roboto, Helvetica, Arial, sans-serif;
+    font-size:1em;
+    font-style:italic;
+    font-weight:bold;
+    font-variant:small-caps;
+    letter-spacing:0.2em;
+    line-height:1.3em;
+    color:black;
+    margin-left:auto;
+    text-align:center;
+    background-color:#5588a3;
+    border-bottom: 1px solid black;
+    height:auto;
+}
+div.prezzo{
+    font-family:Roboto, Helvetica, Arial, sans-serif;
+    font-size:2em;
+    font-style:italic;
+    font-weight:bold;
+    font-variant:small-caps;
+    letter-spacing:0.2em;
+    line-height:1.3em;
+    color:black;
+    margin-left:auto;
+    text-align:center;
+    background-color:#c8e6f5;
+    border-bottom: 1px solid black
+}
+
+/* -----------------END CATALOGO-----------------*/
+
+
+
+
+/* ------------------PANNELLO VISUALIZZA AUTO-------------------*/
+
+div.pannello_visualizza_auto{
+    width:100%;
+    min-height:80%;
+    position:relative;
+    min-width:1200px;
+}
+
+div.slider{
+    margin-left:auto;
+    margin-right:auto;
+    max-width:700px;
+    height:300px;
+}
+
+.left{position:absolute;top:50%;left:0%;}
+.right{position:absolute;top:50%;right:0%;} 
+
+button.left_auto,button.right.auto{
+    display: block;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;	
+}
+
+button.slider:hover { background: rgba(255,255,255,.2); }
+button.slider:active { background: white; }
+
+
+div.testoAUTO{
+    position:relative;
+    height:auto;
+    min-height:300px;
+    width:100%;
+    font-style: italic;
+    font-family: verdana, arial, sans-serif;
+    font-size: 25px;
+}
+p.why{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1em;
+    text-align:center;
+    padding:20px;
+}
+
+
+div.schedaTecnica{
+    position:relative;
+    height:auto;
+    width:100%;
+    background-color:rgba(255,255,255,0.8);
+    bottom: 0;
+}
+div.immagine_visualizza{
+    position:relative;
+    background-size: cover; 
+    width: 100%;
+    height:auto;
+    background-repeat: no-repeat;
+    background-position : center; 
+}
+
+table.visualizzaAuto,tr.visualizzaAuto,td.visualizzaAuto{
+    width:100%;
+    background-color:rgba(255,255,255,0.4);
+    min-height:5em;
+}
+td.visualizzaAuto:hover{
+    background:gray;
+    color:black;
+}
+td.visualizzaAuto,tr.visualizzaAuto{
+    border-right: 2px dotted yellow;
+    vertical-align:central; 
+    text-align:center; 
+    color:black;
+    width:20em;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+td.visualizzaAutoHead{
+    border-right: 2px dotted yellow;
+    vertical-align:central; 
+    text-align:center; 
+    color:black;
+    width:30em;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+/* --------------- END PANNELLO VISUALIZZA AUTO---------------*/
+
+/* ---------------- view staff -------------------*/
+div.viewstaff{
+    background-color:rgba(0,0,0,0.5);
+
+    display:flex;
+
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+
+    justify-content:center;
+
+    -webkit-justify-content:center;
+    -moz-justify-content:center;
+    -ms-justify-content:center;
+
+    align-items:center;
+
+    -webkit-align-items:center;
+    -moz-align-items:center;
+    -ms-align-items:center;
+    
+    min-width: 1200px;
+}
+
+
+table.viewstaff {
+    border-collapse: collapse;
+    min-width: 1200px;
+    color : white;
+    text-align: center;
+    vertical-align: central;
+}
+
+th.viewstaff, td.viewstaff {
+    border-bottom: 1px solid #ddd;
+}
+
+tr.viewstaff:hover {
+    background-color:#f5f5f5;
+    color:black;
+}
+thead.viewstaff{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size:20px;
+}
+a.showcars{
+    color: white;
+    text-decoration: none;
+}
+a.showcars:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+
+/* ---------------- end view staff -------------------*/
+
+
+/* --------------- FILTRI CATALOGO -------------------*/
+
+div.filtri_catalogo{
+    background-color: rgba(198,40,40,0.8);
+    min-width: 1200px;
+    color:white;
+    padding-bottom: 30px; 
+}
+
+
+table.filter_table{
+    width:80%;
+    vertical-align: central;
+}
+td.element{
+    width:auto;
+    height:30px;
+}
+
+label { 
+    font-family: sans-serif;
+    font-variant-caps: all-small-caps;
+    font-weight: 200;
+    font-style: initial;
+    font-size: large;
+    font-weight: 200;
+}
+select{
+    font-family: sans-serif;
+    font-size: large;
+    font-style: initial;
+    font-variant-caps: all-small-caps;
+    font-weight: 200;
+    padding: 5px;
+}
+
+  div.prenota_container {
+    width: 100%;
+    /* posizionamento in fondo alla pagina */
+    position: fixed;
+    bottom: 0;
+    overflow: visible;
+    background: #f5f5f5;
+    z-index: 100;
+    border-top-style:solid;
+    border-color: #B8B8B8;
+    border-width: 2px;
+}
+
+button.button_prenota {
+    float:right;
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+
+    font-size: 28px;
+    padding: 3px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button.button_prenota span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+}
+
+button.button_prenota span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button.button_prenota:hover span {
+    padding-right: 25px;
+}
+
+button.button_prenota:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+
+
+/* ------------------FOOTER-------------------*/
+ul.elenco_footer{
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+}
+li.li_footer:hover{
+    color:red;
+}
+li.li_footer a{
+    color:white;
+    text-decoration:none; 
+}
+
+div.footer_component{
+    float:left; 
+    margin :10px;
+    max-width:300px;
+    width:auto;
+    height:auto; 
+    color : white;
+    margin-right:1%;
+    margin-left:1%;
+    text-align: center;
+}
+div.footer_component_elenco{
+    float:left; 
+    margin :10px;
+    max-width:300px;
+    width:auto;
+    height:auto; 
+    color : white;
+    margin-right:1%;
+    margin-left:1%;
+    font-size:10px;
+    text-align: left;
+}
+.footer_line{
+    clear:both;
+    width:auto;
+    height:2em;
+    color:white; 
+}
+.footer{
+    position:relative;
+    clear:both;
+    display:block;
+    background-color:black;
+    bottom: 0;  
+    text-align: center; 
+    border:0;
+    min-width:1000px;
+    width:auto;
+
+   /* height: 60px;*/
+    display:flex;
+
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+
+    justify-content:center;
+
+    -webkit-justify-content:center;
+    -moz-justify-content:center;
+    -ms-justify-content:center;
+
+    align-items:center;
+
+    -webkit-align-items:center;
+    -moz-align-items:center;
+    -ms-align-items:center;
+
+
+    min-width:1200px;
+}
+.footer_line{
+    position:relative;
+    clear:both;
+    display:block;
+    background-color:black;
+    bottom: 0;  
+    text-align: center; 
+    border:0;
+    width:auto;
+
+
+    display:flex;
+
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+
+    justify-content:center;
+
+    -webkit-justify-content:center;
+    -moz-justify-content:center;
+    -ms-justify-content:center;
+
+    align-items:center;
+
+    -webkit-align-items:center;
+    -moz-align-items:center;
+    -ms-align-items:center;
+
+
+    min-width:1200px;
+}
+a{
+    text-decoration:none; 
+    color:black;
+}
+
+
+div.auto_form{
+    float:left;
+    min-width:500px;
+    margin-left:10%;
+    margin-top:10%;
+    background-color:rgba(255,255,255,0.7);
+    padding: 30px;
+    text-align: center;
+
+}
+
+div.paginazione_elementi {
+    background-color: rgba(198,40,40,0.8);
+    color:white;
+    clear:both;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+div.paginazione{
+    background-color: rgba(198,40,40,0.8);
+    clear:both;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid white;
+    
+}
+
+.paginazione a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid white;
+  color:white;
+}
+
+.paginazione a:hover {
+  background-color: #34495E;
+  color: white;
+  border-radius: 5px;
+}
+textarea{
+    resize:none;
+}
+
+div#chart_div{
+    background-color: rgba(255,255,255,0.9);
+    padding:40px;
+}
+div#statistica{
+    padding:10px;
+}
+table.statistica{
+    background-color: rgba(255,255,255,0.7);
+    border:2px solid black;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+
+table.statistica tr,table.statistica td{
+    border:2px solid black;
+}
+
+div.chat{
+    background-color: rgba(255,255,255,0.4);
+    position:relative;
+}
+div.messaggi{
+    background-color:rgba(245,139,84,0.6);
+    padding:10px;
+    color:white;
+    font-size:20px;
+    text-align: left;
+}
+div.messaggi:nth-child(odd) {
+    text-align: right;
+    background-color:rgba(164,74,40,0.6);
+}
+a.mail{
+    color:whitesmoke;
+}
+
