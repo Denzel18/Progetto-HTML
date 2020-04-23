@@ -11,6 +11,12 @@ In questo breve progetto abbiamo realizzato un applicativo web per la gestione d
 * CSS 
 * JAVASCRIPT 
 
+## Realizzatori 
+   * R. Nerla
+   * A. D'Antonio
+   * K. Bolano
+   * D. Bernovschi (Denzel18, denisberno) 
+
 ### Organizzazione FILE 
 
 * **Applications/**
