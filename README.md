@@ -47,4 +47,4 @@ In questo breve progetto abbiamo realizzato un applicativo web per la gestione d
 
 ## Note 
 * Per eventuali chiarimenti o dubbi, usate la form di *Issues*
-* Questo progetto è stato in collaborazione A. D'A., K.B., R.N e me medesimo 
+* Questo progetto è stato in collaborazione R. Nerla, A. D'Antonio, K. Bolano e D. Bernovschi (Denzel18, denisberno) 
